@@ -1,0 +1,9 @@
+version: "3.7"
+
+services:
+  clisp:
+    container_name: clisp
+    build: .
+    volumes:
+      - ./:/app:cached
+    tty: true
