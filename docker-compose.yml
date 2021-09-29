@@ -1,8 +1,8 @@
-version: "3.7"
+version: "3.8"
 
 services:
   clisp:
-    container_name: clisp
+    container_name: clisp-container
     build: .
     volumes:
       - ./:/app:cached
