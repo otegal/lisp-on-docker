@@ -15,7 +15,11 @@
 (defun describe-path (edge)
   `(there is a ,(caddr edge) going ,(cadr edge) from here.))
 
+(defun describe-paths (location edges)
+  (apply #'append (mapcar #'describe-path (cdr (assoc location edges)))))
+
 ;; Test exec
 (print (describe-location 'living-room *nodes*))
 (print (describe-path '(garden west door)))
+(print (describe-paths 'living-room *edges*))
 
